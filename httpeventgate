@@ -1,0 +1,12 @@
+const securos = require('securos')
+
+securos.connect(async function (core) {
+    core.registerEventHandler("HTTP_EVENT_PROXY", "1", "RECEIVED", CRUD)
+
+
+    function CRUD(e) {
+        console.log(e)
+    }
+
+})
+
